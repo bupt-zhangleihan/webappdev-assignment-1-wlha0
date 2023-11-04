@@ -1,0 +1,29 @@
+{
+    "name": "chrome-plugin-demo",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "chrome-plugin-demo说明",
+    "permission": ["storage", "contextMenus", "notifications"],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {}
+    },
+    "icons": {},
+    "background": {
+        "service_worker": "js/background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://www.baidu.com/*"],
+        "run_at": "document_end",
+        "js": ["js/content.js"],
+        "css": ["css/content.css"]
+        },
+        {
+            "matches": ["http://www.jd.com/*"],
+            "run_at": "document_end",
+            "js": ["js/content.js"],
+            "css": ["css/content.css"]  
+        } 
+    ]
+}

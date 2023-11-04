@@ -1,0 +1,10 @@
+#index-kw{
+    background-color: black !important;
+    color: red !important;
+}
+body{
+    font-size: 34px !important;
+}
+.seckill-item__name {
+    color: red !important;
+}
